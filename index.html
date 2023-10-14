@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PlayBit</title>
+    <link rel="icon" type="image/x-icon" href="favicon.webp">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- fontfamily -->
+    <link href='https://fonts.googleapis.com/css?family=Volkhov' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Hind Siliguri' rel='stylesheet'>
+
+    <!-- icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --bgcolor: black;
+        }
+
+        html {
+            background-color: #ec370f;
+        }
+
+        .logo {
+            margin-top: 3%;
+            margin-left: 46%;
+            margin-bottom: 3%;
+        }
+
+        .navbarline {
+            margin-top: 1%;
+            background-color: black;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.942);
+        }
+
+        .navflex {
+            display: flex;
+        }
+
+        .container-fluid {
+            box-shadow: 0 1px 300px 26px #ec370f;
+        }
+
+        .button {
+            position: absolute;
+            border: 2px solid #ec370f;
+            font-size: 25px;
+            border-radius: 5px;
+            margin: 22px 0 0 51%;
+            background-color: #fe6f03;
+            color: aliceblue;
+            padding: 2px 15px;
+            letter-spacing: 0.5px;
+            font-family: 'Volkhov';
+        }
+
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.942);
+            transition: 0.5s;
+        }
+
+        /* head */
+        .head1 {
+            font-size: 80px;
+            font-family: 'Oswald';
+            letter-spacing: 2px;
+            margin-top: 18%;
+            color: #fd4326;
+        }
+
+        .img1 {
+            width: 60%;
+            margin-left: 34%;
+        }
+
+        .spantxt {
+            color: rgb(255, 255, 255);
+        }
+
+        .para {
+            font-size: 50px;
+            font-family: 'Hind Siliguri';
+            margin-top: 5%;
+            letter-spacing: 2.5px;
+            color: #6a6a6a;
+        }
+
+        .para1 {
+            font-size: 50px;
+            font-family: 'Hind Siliguri';
+            letter-spacing: 2.5px;
+            margin-top: -4%;
+            color: #6a6a6a;
+        }
+
+        .butt {
+            position: absolute;
+            border: 2px solid #282828;
+            font-size: 25px;
+            border-radius: 5px;
+            margin: -14% 0 0 1%;
+            background-color: #272626;
+            color: aliceblue;
+            padding: 8px 20px;
+            letter-spacing: 1px;
+            font-family: 'Volkhov';
+        }
+
+        .butt:hover {
+            background-color: #ec370f;
+            border: #ec370f;
+            color: #272626;
+            transition: 0.5s;
+            font-weight: bolder;
+        }
+
+        .butt:hover .dowloadicon {
+            color: #272626;
+            transition: 0.5s;
+        }
+
+        .dowloadicon {
+            color: #ffffff;
+            margin-right: 20px;
+        }
+
+        /* Card */
+        .card-deck {
+            display: flex;
+            background-color: #ec370f;
+        }
+
+        .card-img-top {
+            width: 75%;
+            height: 75%;
+            margin-top: 38%;
+        }
+
+        .card-img-top {
+            width: 75%;
+            height: 75%;
+            margin-left: 60px;
+            margin-top: 40%;
+        }
+
+        .card-1 {
+            margin-left: 25%;
+            height: 65%;
+            margin-top: 53%;
+        }
+
+        .card-img-top:hover {
+            box-shadow: 10px 10px 20px #c5c5c5,
+                -10px -10px 20px #fbfbfb;
+            transition: 0.9s;
+        }
+
+        .card-2 {
+            margin-left: -2.5%;
+            height: 65%;
+            margin-top: 53%;
+        }
+
+        .card-txt {
+            position: absolute;
+            margin-left: 36%;
+            margin-top: 4%;
+            font-family: 'Volkhov';
+            width: 35%;
+            color: rgb(0, 0, 0);
+        }
+
+        h3.head-1 {
+            margin-left: 25%;
+            margin-top: 6%;
+            font-size: 20px;
+            font-family: 'Oswald';
+            letter-spacing: 1.5px;
+        }
+
+        h2.para-1 {
+            margin-left: -5%;
+            margin-top: -1%;
+            letter-spacing: 1px;
+            font-size: 30px;
+        }
+
+        .con-1 {
+            display: none;
+        }
+
+        .card_main {
+            background-color: #ec370f;
+        }
+
+        /* Card-4 */
+        h4.txt-4 {
+            text-align: center;
+            font-size: 20px;
+            color: black;
+            font-weight: 100;
+            font-family: 'Volkhov';
+            letter-spacing: 1.5px;
+            margin-top: 5%;
+        }
+
+        h4.para-4 {
+            text-align: center;
+            font-size: 25px;
+            letter-spacing: 1px;
+            color: black;
+            font-family: 'Volkhov';
+            line-height: 33px;
+            margin-top: 16px;
+        }
+
+        .video {
+            width: 83%;
+            height: 600px;
+            margin-left: 8.1%;
+            margin-top: 1.5%;
+        }
+
+        /* Part-5 */
+
+        img.w-75.w-md-100.ms-5.img5 {
+            width: 50%;
+            height: 500px;
+            margin-left: 27.5%;
+            margin-top: 16%;
+            border-radius: 20px;
+        }
+
+        .part_5_txt {
+            margin-left: -9%;
+            margin-top: 12%;
+        }
+
+        /* Part-6 */
+        h1.display-6.mt-md-1.mt-xl-5.fw-bolder.head5 {
+            font-size: 40px;
+            margin-left: 6%;
+            color: black;
+            margin-top: 5%;
+            letter-spacing: 1.5px;
+            font-family: 'Volkhov';
+        }
+
+        p.para5.mt-4.fw-400 {
+            font-size: 20px;
+            margin-left: 6%;
+            margin-top: 3%;
+            color: black;
+            letter-spacing: 1.5px;
+            font-family: 'Volkhov';
+        }
+
+        .button-2 {
+            position: absolute;
+            border: 2px solid #282828;
+            font-size: 25px;
+            border-radius: 5px;
+            margin: 22px 0 0 6%;
+            background-color: #282828;
+            color: aliceblue;
+            padding: 11px 25px;
+            letter-spacing: 0.5px;
+            font-family: 'Volkhov';
+        }
+
+        .button-2:hover {
+            border: 2px solid white;
+            color: #282828;
+            font-weight: bolder;
+            transition: 1.5s;
+            background-color: #ec370f;
+        }
+
+        /* Part-6 */
+        .card-6 {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 12%;
+            margin-right: -6.5%;
+            border: 2px solid black;
+            width: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 32px;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            color: #e8e8e8;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .content .heading {
+            font-weight: 700;
+            font-size: 32px;
+        }
+
+        .content .para_part_6 {
+            line-height: 1.5;
+        }
+
+        .content .btn {
+            color: #e8e8e8;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(-45deg, #191512 0%, #525051 100%);
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-6::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(-45deg, #191512 0%, #525051 100%);
+            z-index: -1;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .card-6:hover::before {
+            height: 100%;
+        }
+
+        .card-6:hover {
+            box-shadow: none;
+            cursor: pointer;
+        }
+
+        .card-6:hover .btn {
+            color: #212121;
+            background: #e8e8e8;
+        }
+
+        .content .btn:hover {
+            outline: 2px solid #e8e8e8;
+            background: transparent;
+            color: #e8e8e8;
+        }
+
+        .content .btn:active {
+            box-shadow: none;
+        }
+
+        .icon_part_6 {
+            font-size: 50px;
+            margin-left: 40%;
+            color: black;
+        }
+
+        .card-6:hover .icon_part_6 {
+            color: #ffffff;
+            transition: 1s;
+        }
+
+        p.para_part_6 {
+            font-size: 27px;
+            font-family: 'Volkhov';
+            color: black;
+        }
+
+        .card-6:hover p.para_part_6 {
+            color: #ffffff;
+            transition: 1s;
+        }
+
+        .flex-2 {
+            display: flex;
+            position: absolute;
+            margin-top: 55%;
+            width: 72%;
+            margin-left: 6.5%;
+        }
+
+        h2.Part_6_hrad_1 {
+            position: absolute;
+            text-align: center;
+            margin-left: 42%;
+            margin-top: 47%;
+            font-family: 'Volkhov';
+            color: black;
+            font-size: 40px;
+        }
+
+        .flex-3 {
+            display: flex;
+            position: absolute;
+            margin-top: 74%;
+            width: 70%;
+            margin-left: 8%;
+        }
+
+        /* Last Part */
+        .last_part {
+            position: absolute;
+            margin-top: 93%;
+            width: 100%;
+        }
+
+        .last_part_head {
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Volkhov';
+            color: black;
+        }
+
+        .last_part_para {
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Volkhov';
+            color: #232121;
+        }
+
+        .button_3 {
+            position: absolute;
+            border: 2px solid #ffffff;
+            font-size: 25px;
+            border-radius: 5px;
+            margin: 22px 0 0 43%;
+            background-color: rgb(31, 30, 30);
+            color: rgb(255, 255, 255);
+            padding: 15px 20px;
+            letter-spacing: 0.5px;
+            font-family: 'Volkhov';
+        }
+
+        .button_3:hover {
+            background-color: #ffffff;
+            border: 2px solid black;
+            color: #000000;
+            transition: 0.5s;
+        }
+
+        .button_3:hover .butt_3 {
+            color: black;
+            transition: 0.5s;
+        }
+
+        /* Footer */
+        .footer_part {
+            color: #ec370f;
+            background-color: #000000;
+            font-family: 'Volkhov';
+            margin-top: 10%
+        }
+
+        .footer_icon {
+            margin-left: -90%;
+            width: 40%;
+            margin-top: 15%;
+        }
+
+        .footer_txt {
+            font-size: 15px;
+            font-family: 'Volkhov';
+            margin-top: 3.5%;
+            text-align: center;
+        }
+
+        .footer_design {
+            color: white;
+        }
+
+        .email {
+            font-size: 17px;
+            position: absolute;
+            width: 100%;
+            color: #ec370f;
+            font-family: 'Volkhov';
+            margin-top: -11%;
+            margin-left: 208%;
+        }
+
+        .email_txt {
+            color: white;
+        }
+
+        /* Media qery */
+        /* Screen 1024px */
+        @media screen and (max-width: 1024px) {
+            .logo {
+                margin-top: 3%;
+                margin-left: 6%;
+                margin-bottom: 3%;
+            }
+
+            .button {
+                position: absolute;
+                margin: 22px 0 0 59%;
+                padding: 2px 15px;
+            }
+
+            .img1 {
+                width: 60%;
+                margin-left: 38%;
+            }
+
+            .head1 {
+                font-size: 65px;
+                margin-top: 18%;
+            }
+
+            .para {
+                font-size: 40px;
+            }
+
+            .para1 {
+                font-size: 40px;
+            }
+
+            /* Card */
+            h2.para-1 {
+                font-size: 25px;
+                margin-left: -56px;
+            }
+
+            .card-txt {
+                width: 40%;
+            }
+
+            h3.head-1 {
+                margin-left: 18%;
+            }
+
+            .card-1 {
+                margin-left: 20%;
+            }
+
+            .card-2 {
+                margin-left: 9%;
+            }
+
+            .card-img-top {
+                margin-left: 46px;
+            }
+
+            /* Part-4 */
+            h4.para-4 {
+                font-size: 19px;
+                margin-top: 17px;
+                line-height: 24px;
+            }
+
+            h4.txt-4 {
+                font-size: 18px;
+            }
+
+            .video {
+                width: 91.7%;
+                height: 500px;
+                margin-left: 4.5%;
+                margin-top: 2%;
+            }
+
+            /* Part-6 */
+            h2.Part_6_hrad_1 {
+                margin-left: 38%;
+                margin-top: 62%;
+            }
+
+            .flex-2 {
+                display: flex;
+                position: absolute;
+                margin-top: 71%;
+                width: 73%;
+                margin-left: 6.5%;
+            }
+
+            .flex-3 {
+                margin-top: 92%;
+            }
+
+            p.para_part_6 {
+                font-size: 16px;
+            }
+
+            .icon_part_6 {
+                margin-left: 28%;
+            }
+
+            /* last-part */
+            .last_part {
+                position: absolute;
+                margin-top: 114%;
+                width: 100%;
+            }
+
+            .button_3 {
+                margin: 22px 0 0 40%;
+            }
+
+            /* Footer Part */
+            .footer_part {
+                margin-top: 17%;
+            }
+
+            .footer_icon {
+                margin-left: -23%;
+                width: 68%;
+                margin-top: 13%;
+            }
+
+            .email {
+                font-size: 17px;
+                position: absolute;
+                width: 144%;
+                color: #ec370f;
+                font-family: 'Volkhov';
+                margin-top: -17%;
+                margin-left: 238%;
+            }
+        }
+
+        /* Screen 768px */
+        @media screen and (max-width: 768px) {
+            .logo {
+                margin-top: 3%;
+                margin-left: 1%;
+                margin-bottom: 3%;
+            }
+
+            .button {
+                position: absolute;
+                margin: 22px 0 0 50%;
+                padding: 2px 15px;
+            }
+
+            .img1 {
+                width: 60%;
+                margin: 113px 0 0 75px;
+            }
+
+            .head1 {
+                font-size: 70px;
+                margin-top: 2%;
+            }
+
+            .para {
+                font-size: 43px;
+            }
+
+            .para1 {
+                font-size: 43px;
+            }
+
+            .butt {
+                position: absolute;
+                margin: -112% 0 0 1%;
+                padding: 8px 20px;
+            }
+
+            /* Card */
+            h2.para-1 {
+                font-size: 20px;
+                margin-left: -56px;
+            }
+
+            .card-txt {
+                width: 40%;
+            }
+
+            h3.head-1 {
+                margin-left: 18%;
+                font-size: 15px;
+            }
+
+            .card-1 {
+                margin-left: 25%;
+            }
+
+            .card-2 {
+                margin-left: 2%;
+            }
+
+            img.card-img-top.card-3 {
+                margin-left: 13.5%;
+            }
+
+            /* Part-4 */
+            h4.para-4 {
+                font-size: 15px;
+                margin-top: 15px;
+                line-height: 24px;
+            }
+
+            h4.txt-4 {
+                font-size: 16px;
+            }
+
+            .video {
+                width: 83.7%;
+                height: 350px;
+                margin-left: 8.5%;
+                margin-top: 2%;
+            }
+
+            /* Part-5 */
+            .col-md-6.col-xl-6.head.mt-4.ms-2.ms-xl-0.ms-md-0.part_5_txt {
+                margin-top: -104%;
+            }
+
+            h1.display-6.mt-md-1.mt-xl-5.fw-bolder.head5 {
+                margin-left: 24%;
+                margin-top: -5%;
+            }
+
+            img.w-75.w-md-100.ms-5.img5 {
+                margin-top: 48%;
+            }
+
+            p.para5.mt-4.fw-400 {
+                margin-left: 11%;
+            }
+
+            .button-2 {
+                margin: 22px 0 0 41%;
+            }
+
+            /* Part-6 */
+            h2.Part_6_hrad_1 {
+                margin-left: 31%;
+                margin-top: 90%;
+            }
+
+            .flex-2 {
+                margin-top: 99%;
+                width: 88%;
+                margin-left: -1.5%;
+            }
+
+            .flex-3 {
+                margin-top: 130%;
+                margin-left: 1%;
+                width: 83%;
+            }
+
+            p.para_part_6 {
+                font-size: 13px;
+            }
+
+            .icon_part_6 {
+                margin-left: 28%;
+            }
+
+            /* last-part */
+            .last_part {
+                position: absolute;
+                margin-top: 157%;
+                width: 100%;
+            }
+
+            .button_3 {
+                margin: 22px 0 0 37%;
+            }
+
+            /* Footer Part */
+            .footer_part {
+                margin-top: 17%;
+            }
+
+            .footer_icon {
+                margin-left: -73%;
+                width: 20%;
+                margin-top: 5%;
+            }
+
+            .email {
+                position: absolute;
+                margin-left: 44%;
+                width: 50%;
+                margin-top: -6%;
+            }
+        }
+
+        /* Screen 430px */
+        @media screen and (max-width: 430px) {
+            .button {
+                display: none;
+            }
+
+            .logo {
+                margin-top: 3%;
+                margin-left: 15%;
+                width: 35%;
+                margin-bottom: 3%;
+            }
+
+            .btntoggle {
+                padding: 0px 20px;
+                margin-top: 4px;
+                border: none;
+            }
+
+            .img1 {
+                width: 60%;
+                margin: 113px 0 0 75px;
+            }
+
+            .head1 {
+                font-size: 50px;
+                margin-top: 2%;
+                margin-left: 2%;
+            }
+
+            .para {
+                font-size: 30px;
+                margin-left: 3%;
+            }
+
+            .para1 {
+                font-size: 30px;
+                margin-left: 3%;
+            }
+
+            .butt {
+                position: absolute;
+                margin: -121% 0 0 4%;
+                padding: 8px 20px;
+            }
+
+            .card-deck {
+                display: none;
+            }
+
+            .scroll-1::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            .scroll-1::-webkit-scrollbar-thumb {
+                border-radius: 20px;
+                background: transparent;
+            }
+
+            .con-1 * {
+                width: 100%;
+                margin-top: 17%;
+            }
+
+            .con-1 {
+                display: flex;
+                overflow-x: scroll;
+                width: 85%;
+                margin-left: 7.5%;
+                scroll-snap-type: x mandatory;
+                scroll-padding-top: 24px;
+            }
+
+            .con-1 .card-mb {
+                flex: 0 0 100%;
+                overflow: hidden;
+                border-radius: 8px;
+                scroll-snap-align: start;
+            }
+
+            .card-mb .card-mb__content {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+            }
+
+            .card-mb .card-mb__content .card-mb__title {
+                font-size: 32px;
+                color: #fff;
+                text-transform: capitalize;
+            }
+
+            .card-mb .card-mb__content .card-mb__describe {
+                color: #fff;
+                font-size: 16px;
+            }
+
+            .card_main_div {
+                background-color: #ec370f;
+            }
+
+            h3.head-1 {
+                margin-left: -9%;
+                margin-top: 20px;
+                font-size: 15px;
+            }
+
+            h2.para-1 {
+                font-size: 20px;
+                margin-left: -113px;
+                width: 228%;
+            }
+
+            /* Part-4 */
+            h4.txt-4 {
+                font-size: 23px;
+                margin-top: 15%;
+            }
+
+            h4.para-4 {
+                font-size: 16px;
+                margin: 15px 13px;
+                line-height: 24px;
+            }
+
+            .video {
+                width: 85.7%;
+                height: 215px;
+                margin-left: 7.5%;
+                margin-top: 2%;
+            }
+
+            /* Part-5 */
+            h1.display-6.mt-md-1.mt-xl-5.fw-bolder.head5 {
+                margin-left: 11%;
+                font-size: 31px;
+                margin-top: -19%;
+            }
+
+            .col-md-6.col-xl-6.head.mt-4.ms-2.ms-xl-0.ms-md-0.part_5_txt {
+                margin-top: 29%;
+                position: absolute;
+            }
+
+            img.w-75.w-md-100.ms-5.img5 {
+                margin-top: 87%;
+                width: 75%;
+                margin-left: 10%;
+                position: absolute;
+            }
+
+            .button-2 {
+                margin: 22px 0 0 31%;
+            }
+
+            /* Part-6 */
+            h2.Part_6_hrad_1 {
+                margin-left: 25%;
+                font-size: 30px;
+                margin-top: 217%;
+            }
+
+            .flex-2 {
+                margin-top: 233%;
+                width: 102%;
+                margin-left: -10%;
+            }
+
+            .flex-3 {
+                margin-top: 269%;
+                margin-left: -7%;
+                width: 96%;
+            }
+
+            .card-6 {
+                width: 28%;
+                padding: 9px;
+            }
+
+            p.para_part_6 {
+                font-size: 10px;
+            }
+
+            .icon_part_6 {
+                font-size: 23px;
+                margin-left: 28%;
+                color: black;
+                margin-top: 35%;
+            }
+
+            /* last-part */
+            .last_part {
+                position: absolute;
+                margin-top: 307%;
+                width: 100%;
+            }
+
+            .last_part_head {
+                font-size: 35px;
+            }
+
+            .last_part_para {
+                font-size: 21px;
+            }
+
+            .button_3 {
+                margin: 10px 0 0 25%;
+            }
+
+            /* Footer Part */
+            .footer_part {
+                margin-top: 32%;
+            }
+
+            .footer_icon {
+                margin-left: -65%;
+                width: 31%;
+                margin-top: 6%;
+            }
+
+            .footer_txt {
+                font-size: 10px;
+                margin-top: 8.5%;
+                text-align: center;
+            }
+
+            .email {
+                position: absolute;
+                margin-left: 40%;
+                font-size: 10px;
+                width: 49%;
+                margin-top: -8%;
+            }
+        }
+
+        /* Screen 380px */
+        @media screen and (max-width: 380px) {
+            .head1 {
+                font-size: 38px;
+                margin-top: 2%;
+                margin-left: 2%;
+            }
+
+            .para {
+                font-size: 25px;
+                margin-left: 3%;
+            }
+
+            .para1 {
+                font-size: 25px;
+                margin-left: 3%;
+            }
+
+            .butt {
+                font-size: 17px;
+            }
+
+            h2.para-1 {
+                font-size: 18px;
+                margin-left: -113px;
+                width: 271%;
+            }
+
+            h3.head-1 {
+                margin-left: -12%;
+                margin-top: 20px;
+                font-size: 14px;
+            }
+
+            /* Part-4 */
+            h4.para-4 {
+                font-size: 13px;
+            }
+
+            .video {
+                width: 84.7%;
+                height: 174px;
+            }
+
+            /* Part-5 */
+            h1.display-6.mt-md-1.mt-xl-5.fw-bolder.head5 {
+                font-size: 27px;
+            }
+
+            p.para5.mt-4.fw-400 {
+                margin-left: 11%;
+                font-size: 16px;
+            }
+
+            .button-2 {
+                margin: 22px 0 0 27%;
+            }
+
+            /* Part-6 */
+            h2.Part_6_hrad_1 {
+                margin-left: 20%;
+                font-size: 30px;
+                margin-top: 226%;
+            }
+
+            .flex-2 {
+                margin-top: 242%;
+            }
+
+            .flex-3 {
+                margin-top: 278%;
+            }
+
+            .card-6 {
+                width: 28%;
+                padding: 0px;
+            }
+
+            /* Last Part */
+            .button_3 {
+                margin: 10px 0 0 21%;
+            }
+
+            .email {
+                position: absolute;
+                margin-left: 35%;
+                font-size: 10px;
+                width: 56%;
+                margin-top: -9%;
+            }
+        }
+
+        /* Screen 320px */
+        @media screen and (max-width: 320px) {
+            h2.para-1 {
+                font-size: 16px;
+                margin-left: -103px;
+                width: 271%;
+            }
+
+            h3.head-1 {
+                margin-left: -12%;
+                margin-top: 20px;
+                font-size: 12px;
+            }
+
+            /* Part-4 */
+            h4.para-4 {
+                font-size: 13px;
+                margin: 15px 10px;
+            }
+
+            /* Part-5 */
+            h1.display-6.mt-md-1.mt-xl-5.fw-bolder.head5 {
+                font-size: 22px;
+            }
+
+            p.para5.mt-4.fw-400 {
+                margin-left: 11%;
+                font-size: 14px;
+            }
+
+            img.w-75.w-md-100.ms-5.img5 {
+                margin-top: 94%;
+                margin-left: 8%;
+            }
+
+            .button-2 {
+                margin: 13px 0 0 23%;
+            }
+
+            /* Part-6 */
+            h2.Part_6_hrad_1 {
+                margin-left: 13%;
+                margin-top: 261%;
+            }
+
+            .flex-2 {
+                margin-top: 278%;
+            }
+
+            .flex-3 {
+                margin-top: 321%;
+                width: 91%;
+                margin-left: -4%;
+            }
+
+            .card-6 {
+                width: 28%;
+                padding: 0px;
+            }
+
+            /* last-part */
+            .last_part {
+                position: absolute;
+                margin-top: 364%;
+                width: 100%;
+            }
+
+            .last_part_head {
+                font-size: 27px;
+            }
+
+            .last_part_para {
+                font-size: 16px;
+                margin-top: 0;
+            }
+
+            .button_3 {
+                margin: 10px 0 0 16%;
+            }
+
+            /* Footer Part */
+            .footer_icon {
+                margin-left: -70%;
+                width: 27%;
+                margin-top: 8%;
+            }
+
+            .email {
+                position: absolute;
+                margin-left: 27%;
+                font-size: 9.5px;
+                width: 67%;
+                margin-top: -9%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse navbarline">
+        <div class="container-fluid">
+            <div class="navbar-header navflex">
+                <button type="button" class="btntoggle navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="logo.png" width="50%" alt="Website Logo" class="logo"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.cd.playbit&hl=en&gl=US">
+                    <p class="button">Dowload</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Part-1-->
+    <div class="container">
+        <div class="row mt-5 w-100 h-100 ms-1">
+            <div class="col-md-6 head">
+                <h1 class="display-4 mt-md-5 fw-bolder head1"><span class="spantxt">Dowload</span> PlayBit</h1>
+                <p class="para mt-5 fw-400">Amazing Features With</p>
+                <p class="para1 fw-400">Amazing Application</p>
+            </div>
+            <div class="col-md-6"><img src="img1.webp" alt="" class="img1"></div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.cd.playbit&hl=en&gl=US"><button class="butt"><i
+                    class="fa-solid fa-download dowloadicon"></i>Download</button></a>
+    </div>
+
+    <!-- Part-2 -->
+    <div class="card_main">
+        <div class="card_main_div">
+            <div class="container card-txt">
+                <h3 class="head-1">APP SCREEN</h3>
+                <h2 class="para-1">How our mixup app looks like</h2>
+            </div>
+            <div class="card-deck">
+                <div class="card w-xl-50 m-md-5 p-4 border-0 mt-4">
+                    <img class="card-img-top card-1" src="img3.webp" alt="Card image cap">
+                </div>
+                <div class="card w-xl-50 m-md-5 p-4 border-0 mt-4">
+                    <img class="card-img-top card-3" src="img2.webp" alt="Card image cap">
+                </div>
+                <div class="card w-xl-50 m-md-5 pe-xl-5 p-4 py-4 border-0 mt-4">
+                    <img class="card-img-top card-2" src="img4.webp" alt="Card image cap">
+                </div>
+            </div>
+            <div class=" con-1 scroll-1">
+                <div class="card-mb">
+                    <img src="img3.webp" alt="">
+                </div>
+                <div class="card-mb">
+                    <img src="img2.webp" alt="">
+                </div>
+                <div class="card-mb">
+                    <img src="img4.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Part-4 -->
+        <h4 class="txt-4">Watch Video</h4>
+        <h4 class="para-4">The Video Player App is the best app for video player and you can use it to play bollywood
+            <br>
+            movies, hollywood movies, dance, songs, gana and many more with in full HD quality.
+        </h4>
+        <iframe class="video" width="560" height="315"
+            src="https://www.youtube.com/embed/_nV5SWEFTls?si=yR25Xut3lL0qLpXp" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+        <!-- Part-5 -->
+        <div class="mt-md-5 mt-4 pt-4 mb-5 font_none justify-content-center w-100 flex_div">
+            <div class="col-md-6 col-xl-5"><img src="img5.webp" alt="" class="w-75 w-md-100 ms-5 img5"></div>
+            <div class="col-md-6 col-xl-6 head mt-4 ms-2 ms-xl-0 ms-md-0 part_5_txt">
+                <h1 class="display-6 mt-md-1 mt-xl-5 fw-bolder head5">Watch Video and Enjoy</h1>
+                <p class="para5 mt-4 fw-400">In this app Video Player HD has the feature of background play which means
+                    you can play video and do other work while listening to music from this background video player
+                    feature.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.cd.playbit&hl=en&gl=US">
+                    <p class="button-2">Get Started</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Part-6 -->
+    <h2 class="Part_6_hrad_1">Playbit Features</h2>
+    <div class="flex-2 col-md-6">
+        <div class="card-6">
+            <div class="content"><i class="fa-solid fa-video icon_part_6"></i>
+                <p class="para_part_6">Video Player
+                </p>
+            </div>
+        </div>
+        <div class="card-6">
+            <div class="content"><i class="fa-solid fa-headphones icon_part_6"></i>
+                <p class="para_part_6">Music Player
+                </p>
+            </div>
+        </div>
+        <div class="card-6">
+            <div class="content"><i class="fa-regular fa-file icon_part_6"></i>
+                <p class="para_part_6">Lock File Folder
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-3">
+        <div class="card-6">
+            <div class="content"><i class="fa-solid fa-wand-magic-sparkles icon_part_6"></i></i>
+                <p class="para_part_6">CustomeTheme
+                </p>
+            </div>
+        </div>
+        <div class="card-6">
+            <div class="content"><i class="fa-solid fa-circle-down icon_part_6"></i>
+                <p class="para_part_6">Dowloader
+                </p>
+            </div>
+        </div>
+        <div class="card-6">
+            <div class="content"><i class="fa-solid fa-gear icon_part_6"></i>
+                <p class="para_part_6">Smart Gesture
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="last_part">
+        <h2 class="last_part_head">Download App Today</h2>
+        <h2 class="last_part_para">and Enjoy is a totally FREE HD video player</h2>
+        <a href="https://play.google.com/store/apps/details?id=com.cd.playbit&hl=en&gl=US"><button class="button_3"><i
+                    class="fa-solid fa-download dowloadicon butt_3"></i>Download</button>
+        </a>
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-light text-muted footer_part">
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <img src="logo.png" alt="" class="w-50 footer_icon">
+                            </h6>
+                            <h6 class="email">Email ID :- <a
+                                    href="https://mail.google.com/mail/u/0/#search/Intouchinfotech3%40gmail.com"><span
+                                        class="email_txt">Intouchinfotech3@gmail.com</span></a></h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="text-center p-4 footer_txt" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2023 Copyright:
+                Design By <span class="footer_design fw-bolder">Intouch Infotech</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- script link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
